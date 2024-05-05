@@ -13,4 +13,5 @@ The company is moving to an expansion to the Brazilian market but lacks regional
 
 A snapshot of the Magist database was provided and analyised carefully to give a data-driven recommendation for action.
 
-Please view scripts "data exploration.sql" and 
+## Usage
+The database snapshot can be retrieved from the dump file. SQL querries were used to  
