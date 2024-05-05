@@ -7,7 +7,7 @@ B: Are the currently in place discount strategies beneficial to the companies sa
 
 # Case Study A: Exploring the Brazilan market
 ## Background: 
-The company is exploring an expansion to the Brazilian market but lacks regional knowledge. It is considering a 3-year contract with Magist, a Brazilian Software company that offers a centralized order management system to connect small and medium-sized stores with the biggest Brazilian marketplaces as an intermediate step to produce brand awareness. However, it is debated whether:
+The company is moving to an expansion to the Brazilian market but lacks regional knowledge. It is considering a 3-year contract with Magist, a Brazilian Software company that offers a centralized order management system to connect small and medium-sized stores with the biggest Brazilian marketplaces as an intermediate step to produce brand awareness. However, it is debated whether:
 * It is not clear that Magist is a good partner for selling high-end Apple-compatible accessories.
 * Can Magist provide fast and reliable dilevery?
 
