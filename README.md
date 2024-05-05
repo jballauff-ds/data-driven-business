@@ -15,3 +15,6 @@ A snapshot of the Magist database was provided and analyised carefully to give a
 
 ## Usage
 The database snapshot can be retrieved from the dump file. SQL querries were used to  
+
+## Results/ Summary
+https://public.tableau.com/app/profile/johannes.ballauff/viz/Magist-Database-Analysis/Magist-Story
