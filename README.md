@@ -1,0 +1,2 @@
+# data-driven-buiseness
+ Data Science Exercise: This project features exploration and analysis of real world data to consult a (fictive!) online retailer for Apple accessories on important future business strategies.  A: On its current endeavour to enter the Brazilian market, should the company collaborate with the software service company “Magist” as a business partner, handling warehousing, logistics and connection to big marketplaces?  B: Are the currently in place discount strategies beneficial to the companies sales and revenue?
