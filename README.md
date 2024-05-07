@@ -95,3 +95,26 @@ Magist seems to be a growing platform the provides timely and reliable deliverie
   _avg. product volume: 16,564 cm^3; avg. product weight: 2276 g_
   _no clear pattern a higher percentage of parcels with products above the avg. weight or size being delayed_
   _tech products had a similar percentage of delayed parcels as other products_
+
+# Case Study B: Discount policies
+
+## Background:
+
+Within the company there is an ongoing debate whether product discounts overall benefit the company or not. The opposing initial hypothesis are: Discounts benefit the company in the long run vs. discounts, while increasing sales numbers harm the total revenue. The results should be presented in a concise and easy to follow presentation.
+
+A snapshot of the companies own Database was analyzed to resolve this matter. However, the data had considerable flaws and extensive cleanup was required to produce reliable results.
+
+## Usage
+
+The data is provided as separate .csv files. You can find them in the data and data_cleaned directory. Data cleanup and subsequent analysis is documented in the respective Jupyter Notebooks.
+
+## Results/ Summary
+
+Seasonal variation (especially Christmas-Business) not discounts was the strongest driver for sales. Sales were positively affected by discounts however, discounts > 5-10 % reduced the revenue and did not seem to improve sales further. The data-driven recommendation is to keep discount offer between 5 - 10% and use them to mitigate the effects of low-selling seasons.
+
+Recommendations on data management and additional data collection:
+
+- Stricter quality control and verification of data type upon data entry
+- Including product manufacturer/ supply costs will enable profit estimates
+- Products should be classified in easy to understand, hierarchical categories
+- Records (e.g. monthly) should be kept which products where offered in the shop at what price point
