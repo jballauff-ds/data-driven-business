@@ -7,7 +7,6 @@ FROM products AS p
 LEFT JOIN
 	product_category_name_translation AS t ON p.product_category_name = t.product_category_name;
 
-   ## computers_accessories, electronics, computers, telephony
 
 #How many products of these tech categories have been sold (within the time window of the database snapshot)? What percentage does that represent from the overall number of products sold?
 SELECT 
@@ -23,7 +22,6 @@ FROM order_items as o
 LEFT JOIN products AS p ON o.product_id = p.product_id
 LEFT JOIN product_category_name_translation AS t ON p.product_category_name = t.product_category_name
 GROUP BY tech_or_other;
-## 15342/(97308+15342) =~ 0.136 = 13.6%
 
 #What’s the average price of the products being sold?
 SELECT 
@@ -61,7 +59,6 @@ FROM
     orders
 GROUP BY ord_year , ord_month
 ORDER BY ord_year, ord_month;
-## 25 BUT 9/2018 - 10/2018 incomplete? (low sales numbers) -> 23
 
 
 #How many sellers are there? How many Tech sellers are there? What percentage of overall sellers are Tech sellers?
@@ -79,8 +76,7 @@ LEFT JOIN products AS p ON o.product_id = p.product_id
 LEFT JOIN product_category_name_translation as t ON p.product_category_name = t.product_category_name
 WHERE t.product_category_name_english IN ("computers_accessories", "electronics", "computers","telephony");
 
-#What is the total amount earned by all sellers? What is the total amount earned by all Tech sellers?
-# earn = revenue (total gross income?)
+#What is the total revenue earned by all sellers? What is the total revenue earned by all Tech sellers?
 SELECT
 	SUM(op.payment_value) AS Total_revenue
 FROM sellers AS s
@@ -98,8 +94,7 @@ LEFT JOIN product_category_name_translation as t ON p.product_category_name = t.
 WHERE t.product_category_name_english IN ("computers_accessories", "electronics", "computers","telephony");
 ## ~2,600,000
 
-#Can you work out the average monthly income of all sellers? Can you work out the average monthly income of Tech sellers?
-# earn = revenue (total gross income?)
+#Can you work out the average monthly revenue of all sellers? Can you work out the average monthly revenue of Tech sellers?
 SELECT
 	AVG(output.monthly_revenue)
 FROM
@@ -113,7 +108,7 @@ FROM
 	LEFT JOIN order_payments AS op ON o.order_id = op.order_id
 	GROUP BY year, month
 	ORDER BY year,month) AS output;
-## ~ 846,000
+
 
 SELECT
 	AVG(output.monthly_revenue)
@@ -131,17 +126,16 @@ FROM
 	WHERE t.product_category_name_english IN ("computers_accessories", "electronics", "computers","telephony")
 	GROUP BY year, month
 	ORDER BY year,month) AS output;
-## ~ 118,000
+
 
 #What’s the average time between the order being placed and the product being delivered?
-
 SELECT
 	AVG(TIMESTAMPDIFF(DAY,order_purchase_timestamp,order_delivered_customer_date)) AS avg_delivery_time_days
 FROM
 	orders;
 
 #How many orders are delivered on time vs orders delivered with a delay?
-#delayed = order delivered >= 1 day after expected date
+##delayed = order delivered >= 1 day after expected date
 SELECT
 	COUNT(order_id),
     CASE 
